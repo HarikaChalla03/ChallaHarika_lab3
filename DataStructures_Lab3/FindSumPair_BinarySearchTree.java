@@ -25,7 +25,7 @@ public class FindSumPair_BinarySearchTree {
 	    		  root.right = insert(root.right, key);
 	    	  }
 			return root;
-	      }
+	       }
 	  
 
 		public static boolean findPair(Node current, int sum, Set<Integer> set) {
@@ -44,14 +44,13 @@ public class FindSumPair_BinarySearchTree {
 	    	  }
 	    	  else {
 	    		  set.add(current.data);
-	    	  }
-	    		  return findPair(current.right, sum, set);
-	    	  }
+	    	      }
+	    	      return findPair(current.right, sum, set);
+	    	      }
 	    	 
-	     }
+	          }
 	    	  
-	      
-	     public static void findPairWithGivenSum(Node root, int sum){
+	         public static void findPairWithGivenSum(Node root, int sum){
 	    	 HashSet<Integer> set = new HashSet<Integer>();
 	    	 boolean isPresent = findPair(root, sum, set);
 	    	 if(!isPresent) {
@@ -69,8 +68,7 @@ public class FindSumPair_BinarySearchTree {
 	    	 root = findSumPair.insert(root, 30);
 	         root = findSumPair.insert(root, 50);
 	         root = findSumPair.insert(root, 70);
-
-			findPairWithGivenSum(root, 60);
+		 findPairWithGivenSum(root, 60);
 	     }
 }
 
